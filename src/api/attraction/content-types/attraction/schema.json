@@ -1,0 +1,108 @@
+{
+    "kind": "collectionType",
+    "collectionName": "attractions",
+    "info": {
+        "singularName": "attraction",
+        "pluralName": "attractions",
+        "displayName": "Attraction 景点"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "name_zh": {
+            "type": "string",
+            "required": true
+        },
+        "name_en": {
+            "type": "string"
+        },
+        "name_es": {
+            "type": "string"
+        },
+        "province_zh": {
+            "type": "string"
+        },
+        "province_en": {
+            "type": "string"
+        },
+        "province_es": {
+            "type": "string"
+        },
+        "city_zh": {
+            "type": "string"
+        },
+        "city_en": {
+            "type": "string"
+        },
+        "city_es": {
+            "type": "string"
+        },
+        "location_zh": {
+            "type": "text"
+        },
+        "location_en": {
+            "type": "text"
+        },
+        "location_es": {
+            "type": "text"
+        },
+        "description_zh": {
+            "type": "text"
+        },
+        "description_en": {
+            "type": "text"
+        },
+        "description_es": {
+            "type": "text"
+        },
+        "image": {
+            "type": "string"
+        },
+        "reservation_required": {
+            "type": "boolean",
+            "default": false
+        },
+        "transport_zh": {
+            "type": "text"
+        },
+        "transport_en": {
+            "type": "text"
+        },
+        "transport_es": {
+            "type": "text"
+        },
+        "opening_hours_zh": {
+            "type": "string"
+        },
+        "opening_hours_en": {
+            "type": "string"
+        },
+        "opening_hours_es": {
+            "type": "string"
+        },
+        "ticket_price_zh": {
+            "type": "string"
+        },
+        "ticket_price_en": {
+            "type": "string"
+        },
+        "ticket_price_es": {
+            "type": "string"
+        },
+        "tips_zh": {
+            "type": "text"
+        },
+        "tips_en": {
+            "type": "text"
+        },
+        "tips_es": {
+            "type": "text"
+        },
+        "sort_order": {
+            "type": "integer",
+            "default": 0
+        }
+    }
+}

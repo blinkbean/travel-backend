@@ -1,0 +1,74 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tours",
+  "info": {
+    "singularName": "tour",
+    "pluralName": "tours",
+    "displayName": "Tour 旅游线路"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title_zh": {
+      "type": "string",
+      "required": true
+    },
+    "title_en": {
+      "type": "string"
+    },
+    "title_es": {
+      "type": "string"
+    },
+    "route_zh": {
+      "type": "string"
+    },
+    "route_en": {
+      "type": "string"
+    },
+    "route_es": {
+      "type": "string"
+    },
+    "description_zh": {
+      "type": "text"
+    },
+    "description_en": {
+      "type": "text"
+    },
+    "description_es": {
+      "type": "text"
+    },
+    "price": {
+      "type": "integer"
+    },
+    "duration_zh": {
+      "type": "string"
+    },
+    "duration_en": {
+      "type": "string"
+    },
+    "duration_es": {
+      "type": "string"
+    },
+    "image": {
+      "type": "string"
+    },
+    "badge": {
+      "type": "string"
+    },
+    "highlights_zh": {
+      "type": "json"
+    },
+    "highlights_en": {
+      "type": "json"
+    },
+    "highlights_es": {
+      "type": "json"
+    },
+    "sort_order": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}

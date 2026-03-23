@@ -1,0 +1,48 @@
+{
+    "kind": "collectionType",
+    "collectionName": "bookings",
+    "info": {
+        "singularName": "booking",
+        "pluralName": "bookings",
+        "displayName": "Booking 预订"
+    },
+    "options": {
+        "draftAndPublish": false
+    },
+    "attributes": {
+        "name": {
+            "type": "string",
+            "required": true
+        },
+        "phone": {
+            "type": "string",
+            "required": true
+        },
+        "email": {
+            "type": "email",
+            "required": true
+        },
+        "tour_name": {
+            "type": "string"
+        },
+        "travel_date": {
+            "type": "date"
+        },
+        "people_count": {
+            "type": "integer",
+            "default": 1
+        },
+        "notes": {
+            "type": "text"
+        },
+        "status": {
+            "type": "enumeration",
+            "enum": [
+                "pending",
+                "confirmed",
+                "cancelled"
+            ],
+            "default": "pending"
+        }
+    }
+}
