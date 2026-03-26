@@ -66,9 +66,24 @@
     "highlights_es": {
       "type": "json"
     },
+    "detail_zh": {
+      "type": "richtext"
+    },
+    "detail_en": {
+      "type": "richtext"
+    },
+    "detail_es": {
+      "type": "richtext"
+    },
     "sort_order": {
       "type": "integer",
       "default": 0
+    },
+    "destination": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::destination.destination",
+      "inversedBy": "tours"
     }
   }
 }

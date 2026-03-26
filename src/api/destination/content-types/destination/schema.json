@@ -48,6 +48,12 @@
     },
     "content_es": {
       "type": "text"
+    },
+    "tours": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tour.tour",
+      "mappedBy": "destination"
     }
   }
 }

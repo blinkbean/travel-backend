@@ -559,6 +559,7 @@ export interface ApiDestinationDestination extends Struct.CollectionTypeSchema {
     subtitle_en: Schema.Attribute.String;
     subtitle_es: Schema.Attribute.String;
     subtitle_zh: Schema.Attribute.String;
+    tours: Schema.Attribute.Relation<'oneToMany', 'api::tour.tour'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -738,6 +739,13 @@ export interface ApiTourTour extends Struct.CollectionTypeSchema {
     description_en: Schema.Attribute.Text;
     description_es: Schema.Attribute.Text;
     description_zh: Schema.Attribute.Text;
+    destination: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::destination.destination'
+    >;
+    detail_en: Schema.Attribute.RichText;
+    detail_es: Schema.Attribute.RichText;
+    detail_zh: Schema.Attribute.RichText;
     duration_en: Schema.Attribute.String;
     duration_es: Schema.Attribute.String;
     duration_zh: Schema.Attribute.String;
