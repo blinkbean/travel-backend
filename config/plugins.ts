@@ -10,6 +10,7 @@ export default ({ env }) => ({
         params: { Bucket: env('AWS_BUCKET') },
         baseUrl: env('CLOUDFLARE_PUBLIC_URL'),
       },
+      breakpoints: {},
     },
   },
 });
