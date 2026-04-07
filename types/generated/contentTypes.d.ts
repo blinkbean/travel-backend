@@ -632,6 +632,40 @@ export interface ApiMomentMoment extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiNoticeNotice extends Struct.CollectionTypeSchema {
+  collectionName: 'notices';
+  info: {
+    displayName: 'Notice \u516C\u544A';
+    pluralName: 'notices';
+    singularName: 'notice';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    content: Schema.Attribute.RichText;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    img: Schema.Attribute.Media<'images'>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::notice.notice'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    qr_img: Schema.Attribute.Media<'images'>;
+    sort_order: Schema.Attribute.Integer & Schema.Attribute.DefaultTo<0>;
+    subtitle: Schema.Attribute.String;
+    time: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiReviewReview extends Struct.CollectionTypeSchema {
   collectionName: 'reviews';
   info: {
@@ -1287,6 +1321,7 @@ declare module '@strapi/strapi' {
       'api::destination.destination': ApiDestinationDestination;
       'api::inquiry.inquiry': ApiInquiryInquiry;
       'api::moment.moment': ApiMomentMoment;
+      'api::notice.notice': ApiNoticeNotice;
       'api::review.review': ApiReviewReview;
       'api::tour.tour': ApiTourTour;
       'plugin::content-releases.release': PluginContentReleasesRelease;
